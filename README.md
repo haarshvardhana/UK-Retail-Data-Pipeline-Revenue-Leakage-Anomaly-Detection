@@ -37,16 +37,18 @@ X = Daily Return Volume
 
 ## 📂 REPOSITORY STRUCTURE
 
-- `01_ELT_Cleaning_Pipeline.sql`: The Foundation. Handles multi-format timestamp parsing and data integrity checks.  
+- `99_full_pipeline_master.sql`: A comprehensive master script consolidating the end-to-end engineering logic.
+  
+-- `01_ELT_Cleaning_Pipeline.sql`: The Foundation. Handles multi-format timestamp parsing and data integrity checks.  
 > Implemented a recursive COALESCE parsing strategy to resolve 5+ inconsistent date/time formats common in Excel-exported retail logs.
 
-- `02_Revenue_and_RFM_Modeling.sql`: The Business Logic. Segments customers and calculates the "Leakage" metrics.
+-- `02_Revenue_and_RFM_Modeling.sql`: The Business Logic. Segments customers and calculates the "Leakage" metrics.
 
-- `03_Statistical_Anomaly_Detection.sql`: The Math. Implements a 30-day rolling window Z-Score to flag financial outliers.
+-- `03_Statistical_Anomaly_Detection.sql`: The Math. Implements a 30-day rolling window Z-Score to flag financial outliers.
 
-- `04_Retention_Cohort_Analysis.sql`: The Strategy. Tracks the 12-month lifecycle and churn patterns.
+-- `04_Retention_Cohort_Analysis.sql`: The Strategy. Tracks the 12-month lifecycle and churn patterns.
 
-- `99_full_pipeline_master.sql`: A comprehensive master script consolidating the end-to-end engineering logic.
+- `dev_and_research/`: Contains raw scratchpad scripts and initial exploratory queries used during the R&D phase of the audit.
 
 ---
 
