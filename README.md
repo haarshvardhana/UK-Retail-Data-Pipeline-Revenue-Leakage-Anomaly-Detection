@@ -37,7 +37,7 @@ X = Daily Return Volume
 
 ## 📂 REPOSITORY STRUCTURE
 
-- `99_full_pipeline_master.sql`: A comprehensive master script consolidating the end-to-end engineering logic.
+- `📂 sql_scripts.sql`: A comprehensive master script consolidating the end-to-end engineering logic.
   
 -- `01_ELT_Cleaning_Pipeline.sql`: The Foundation. Handles multi-format timestamp parsing and data integrity checks.  
 > Implemented a recursive COALESCE parsing strategy to resolve 5+ inconsistent date/time formats common in Excel-exported retail logs.
@@ -48,7 +48,7 @@ X = Daily Return Volume
 
 -- `04_Retention_Cohort_Analysis.sql`: The Strategy. Tracks the 12-month lifecycle and churn patterns.
 
-- `dev_and_research/`: Contains raw scratchpad scripts and initial exploratory queries used during the R&D phase of the audit.
+- `📂 dev_and_research/`: Contains raw scratchpad scripts and initial exploratory queries used during the R&D phase of the audit.
 
 ---
 
