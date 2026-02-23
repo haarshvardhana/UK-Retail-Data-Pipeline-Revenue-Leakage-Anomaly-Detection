@@ -1,7 +1,7 @@
 # UK RETAIL DATA PIPELINE: REVENUE LEAKAGE & ANOMALY DETECTION
 
 ## 📋 PROJECT OVERVIEW
-Led a 3-person collaborative team to audit a large-scale dataset of 541,000+ transactions from a UK-based retailer. The project focused on transforming raw, messy transaction logs into a high-integrity financial model to identify "Revenue Leakage"—the delta between potential gross sales and actual retained revenue.
+Led a 3-person collaborative team to audit a large-scale dataset of 541,000+ transactions from a UK-based retailer. The project focused on transforming raw, messy transaction logs into a high-integrity financial model to identify "Revenue Leakage", the delta between potential gross sales and actual retained revenue.
 
 **Data Source:** UCI Machine Learning Repository - Online Retail Dataset (541,909 rows of transactions).
 
