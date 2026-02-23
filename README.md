@@ -24,7 +24,7 @@ As the lead for the Logic & Engineering phase, I developed the scripts to solve 
 - **STATISTICAL OUTLIER DETECTION:** Applied a Rolling Z-Score algorithm to daily return volumes. By calculating the standard deviation over a 30-day moving window, we flagged "Anomaly Days" where losses were >2σ from the mean.  
   (See Anomaly Detection screenshot for the 3-sigma flagging in action).
 
-  Z-Score Formula Used: # Z = (X - μ) / σ
+ # Z-Score Formula Used:  Z = (X - μ) / σ
 
 Where:  
 X = Daily Return Volume  
