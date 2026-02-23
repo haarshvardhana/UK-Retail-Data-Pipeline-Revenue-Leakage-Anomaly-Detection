@@ -11,6 +11,7 @@ Led a 3-person collaborative team to audit a large-scale dataset of 541,000+ tra
 - **Platform:** Google BigQuery (SQL)  
 - **Scale:** 541,000+ Rows  
 - **Concepts:** ELT Pipeline, Statistical Outlier Detection (Z-Score), RFM Segmentation, Cohort Analysis  
+- **Architecture:** Dedicated ELT (Extract, Load, Transform) framework using CTE-heavy (Common Table Expressions) modular design  
 
 ---
 
@@ -20,7 +21,15 @@ As the lead for the Logic & Engineering phase, I developed the scripts to solve 
 
 - **THE NET REVENUE PARADOX:** Engineered logic in the ELT phase to handle return transactions (negative values) to calculate True Net Revenue and isolate "Bleed" without double-counting losses.
 
-- **STATISTICAL OUTLIER DETECTION:** Applied a Rolling Z-Score algorithm to daily return volumes. By calculating the standard deviation over a 30-day moving window, we flagged "Anomaly Days" where losses were >2σ from the mean.
+- **STATISTICAL OUTLIER DETECTION:** Applied a Rolling Z-Score algorithm to daily return volumes. By calculating the standard deviation over a 30-day moving window, we flagged "Anomaly Days" where losses were >2σ from the mean.  
+  (See Anomaly Detection screenshot for the 3-sigma flagging in action).
+
+  Z-Score Formula Used: # Z = (X - μ) / σ
+
+Where:  
+X = Daily Return Volume  
+μ = 30-day Moving Average  
+σ = 30-day Rolling Standard Deviation  
 
 - **REVENUE LEAKAGE QUANTIFICATION:** Created an Operational Friction Coefficient (Leakage %) within an RFM matrix to identify "Sleeping Whales"—high-value customers whose return behavior exceeds 10% of their Lifetime Value.
 
@@ -28,11 +37,24 @@ As the lead for the Logic & Engineering phase, I developed the scripts to solve 
 
 ## 📂 REPOSITORY STRUCTURE
 
-- `01_ELT_Cleaning_Pipeline.sql`: Handles multi-format timestamp parsing, NULL handling, and diagnostic flag creation.  
-- `02_Revenue_and_RFM_Modeling.sql`: Calculates Net LTV, Frequency, and Recency to segment the customer base.  
-- `03_Statistical_Anomaly_Detection.sql`: Implementation of the Rolling Z-Score physics logic to isolate high-variance loss days.  
-- `04_Retention_Cohort_Analysis.sql`: Tracks monthly user decay and retention patterns across the 12-month period.  
-- `99_full_pipeline_master.sql`: A comprehensive master script consolidating the end-to-end engineering logic.  
+- `01_ELT_Cleaning_Pipeline.sql`: The Foundation. Handles multi-format timestamp parsing and data integrity checks.  
+> Implemented a recursive COALESCE parsing strategy to resolve 5+ inconsistent date/time formats common in Excel-exported retail logs.
+
+- `02_Revenue_and_RFM_Modeling.sql`: The Business Logic. Segments customers and calculates the "Leakage" metrics.
+
+- `03_Statistical_Anomaly_Detection.sql`: The Math. Implements a 30-day rolling window Z-Score to flag financial outliers.
+
+- `04_Retention_Cohort_Analysis.sql`: The Strategy. Tracks the 12-month lifecycle and churn patterns.
+
+- `99_full_pipeline_master.sql`: A comprehensive master script consolidating the end-to-end engineering logic.
+
+---
+
+## 🔁 How to Reproduce
+
+> 1. Upload the UCI Online Retail CSV to Google BigQuery.  
+> 2. Run the scripts in the sql_scripts folder in sequential order (01 to 04).  
+> 3. The final audit tables will be generated in your dataset.
 
 ---
 
@@ -42,10 +64,4 @@ As the lead for the Logic & Engineering phase, I developed the scripts to solve 
 - **INSIGHT:** Identified that ~7% of total revenue was lost through a specific segment of high-frequency returners.  
 - **AUTOMATION:** Developed a repeatable framework for detecting financial anomalies and "Sleeping Whales" in raw logs.
 
----
-
-## 🔁 How to Reproduce
-
-> 1. Upload the UCI Online Retail CSV to Google BigQuery.  
-> 2. Run the scripts in the sql_scripts folder in sequential order (01 to 04).  
-> 3. The final audit tables will be generated in your dataset.
+  Z-Score Formula Used:
