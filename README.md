@@ -54,7 +54,9 @@ X = Daily Return Volume
 
 > 1. Upload the UCI Online Retail CSV to Google BigQuery.  
 > 2. Run the scripts in the sql_scripts folder in sequential order (01 to 04).  
-> 3. The final audit tables will be generated in your dataset.
+> 3. The final audit tables will be generated in your dataset.  
+
+**Note:** This project utilizes BigQuery-specific syntax such as SAFE.PARSE_TIMESTAMP and WINDOW functions for optimized columnar processing.
 
 ---
 
