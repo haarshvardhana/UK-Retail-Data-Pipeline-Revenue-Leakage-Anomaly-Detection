@@ -41,3 +41,11 @@ As the lead for the Logic & Engineering phase, I developed the scripts to solve 
 - **SCALE:** Optimized SQL queries to process 0.5M+ rows in seconds using BigQuery's columnar storage.  
 - **INSIGHT:** Identified that ~7% of total revenue was lost through a specific segment of high-frequency returners.  
 - **AUTOMATION:** Developed a repeatable framework for detecting financial anomalies and "Sleeping Whales" in raw logs.
+
+---
+
+## 🔁 How to Reproduce
+
+> 1. Upload the UCI Online Retail CSV to Google BigQuery.  
+> 2. Run the scripts in the sql_scripts folder in sequential order (01 to 04).  
+> 3. The final audit tables will be generated in your dataset.
