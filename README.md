@@ -1,0 +1,2 @@
+# UK-Retail-Data-Pipeline-Revenue-Leakage-Anomaly-Detection
+Led a 3-person audit of 541k+ UK retail transactions using BigQuery &amp; SQL. Engineered a robust data pipeline to quantify "Revenue Leakage" by calculating Net Revenue vs. Gross Potential. Developed a statistical anomaly detection model using Z-scores to flag "Serial Returners," uncovering critical profit loss patterns in high-volume scale.
