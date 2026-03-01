@@ -67,5 +67,3 @@ X = Daily Return Volume
 - **SCALE:** Optimized SQL queries to process 0.5M+ rows in seconds using BigQuery's columnar storage.  
 - **INSIGHT:** Identified that ~7% of total revenue was lost through a specific segment of high-frequency returners.  
 - **AUTOMATION:** Developed a repeatable framework for detecting financial anomalies and "Sleeping Whales" in raw logs.
-
-  Z-Score Formula Used:
