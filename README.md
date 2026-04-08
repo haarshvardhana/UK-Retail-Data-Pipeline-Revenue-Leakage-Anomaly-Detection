@@ -57,7 +57,7 @@ X = Daily Return Volume
 
 ---
 
-<span style="color: red;">## 📊 Cohort Retention Output</span>
+## 📊 Cohort Retention Output</span>
 
 <img width="1458" height="799" alt="3  Cohort Retention" src="https://github.com/user-attachments/assets/9d1d298d-8102-4e93-92ae-7c63e5f0d66b" />
 
