@@ -24,6 +24,9 @@ As the lead for the Logic & Engineering phase, I developed the scripts to solve 
 - **STATISTICAL OUTLIER DETECTION:** Applied a Rolling Z-Score algorithm to daily return volumes. By calculating the standard deviation over a 30-day moving window, we flagged "Anomaly Days" where losses were >2σ from the mean.  
   (See Anomaly Detection screenshot for the 3-sigma flagging in action).
 
+<img width="1517" height="867" alt="1  daily_return_anomalies" src="https://github.com/user-attachments/assets/22a4a86a-6fd4-4804-8808-103adc9ffd79" />
+
+
  ## Z-Score Formula Used:  Z = (X - μ) / σ
 
 Where:  
@@ -32,6 +35,8 @@ X = Daily Return Volume
 σ = 30-day Rolling Standard Deviation  
 
 - **REVENUE LEAKAGE QUANTIFICATION:** Created an Operational Friction Coefficient (Leakage %) within an RFM matrix to identify "Sleeping Whales"—high-value customers whose return behavior exceeds 10% of their Lifetime Value.
+
+<img width="1537" height="816" alt="2  Sleeping Whales" src="https://github.com/user-attachments/assets/36d58365-e998-4f42-9bdf-eb35ef18d335" />
 
 ---
 
@@ -51,6 +56,11 @@ X = Daily Return Volume
 - `📂 dev_and_research/`: Contains raw scratchpad scripts and initial exploratory queries used during the R&D phase of the audit.
 
 ---
+
+<span style="color: red;">## 📊 Cohort Retention Output</span>
+
+<img width="1458" height="799" alt="3  Cohort Retention" src="https://github.com/user-attachments/assets/9d1d298d-8102-4e93-92ae-7c63e5f0d66b" />
+
 
 ## 🔁 How to Reproduce
 
