@@ -34,7 +34,7 @@ X = Daily Return Volume
 μ = 30-day Moving Average  
 σ = 30-day Rolling Standard Deviation  
 
-- **REVENUE LEAKAGE QUANTIFICATION:** Created an Operational Friction Coefficient (Leakage %) within an RFM matrix to identify "Sleeping Whales"—high-value customers whose return behavior exceeds 10% of their Lifetime Value.
+- **REVENUE LEAKAGE QUANTIFICATION:** Created an Operational Friction Coefficient (Leakage %) within an RFM matrix to identify "Sleeping Whales" - high-value customers whose return behavior exceeds 10% of their Lifetime Value.
 
 <img width="1537" height="816" alt="2  Sleeping Whales" src="https://github.com/user-attachments/assets/36d58365-e998-4f42-9bdf-eb35ef18d335" />
 
